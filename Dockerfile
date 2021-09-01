@@ -5,9 +5,7 @@ LABEL org.opencontainers.image.authors="RTSP <docker@rtsp.us>"
 LABEL org.opencontainers.image.source="https://github.com/rtsp/docker-net-tools"
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 
-RUN set -x \
-    && apt-get update \
-    && apt-get --yes --no-install-recommends install \
+RUN set -x && apt-get update && apt-get --yes --no-install-recommends install \
     bash \
     ca-certificates \
     bind9-host \
