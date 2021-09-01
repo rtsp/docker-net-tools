@@ -33,7 +33,7 @@ jobs:
         uses: docker/metadata-action@v3.5.0
         with:
           images: |
-            rtsp/net-tools
+            ${{ secrets.DOCKER_REPO }}
             ghcr.io/${{ github.repository }}
 
       - name: Build and push Docker images
