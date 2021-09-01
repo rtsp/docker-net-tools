@@ -38,7 +38,7 @@ RUN set -x \
     tftp \
     traceroute \
     util-linux \
-    vim-nox \
+    vim-tiny \
     wget \
     && rm -rvf /var/lib/apt/lists/*
 
