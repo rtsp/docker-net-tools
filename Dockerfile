@@ -42,6 +42,6 @@ RUN set -x \
     wget \
     && rm -rvf /var/lib/apt/lists/*
 
-COPY files/.bashrc /root/.bashrc
+COPY files/ /root/
 
 CMD ["/bin/sleep", "365d"]
