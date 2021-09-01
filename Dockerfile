@@ -1,4 +1,4 @@
-FROM debian:bullseye-20210816
+FROM debian:bullseye-20210816-slim
 
 LABEL org.opencontainers.image.title="RTSP Network Tools"
 LABEL org.opencontainers.image.authors="RTSP <docker@rtsp.us>"
