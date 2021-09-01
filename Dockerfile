@@ -9,6 +9,7 @@ RUN set -x \
     && apt-get update \
     && apt-get --yes --no-install-recommends install \
     bash \
+    ca-certificates \
     bind9-host \
     coreutils \
     curl \
