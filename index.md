@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+# RTSP Network Tools Docker Image
 
-You can use the [editor on GitHub](https://github.com/rtsp/docker-net-tools/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Debian with basic network tools included.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Usage
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### Run Once
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```ShellSession
+docker run --rm -it rtsp/net-tools bash
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### Run as Daemon
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rtsp/docker-net-tools/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```ShellSession
+docker run -d --name rtsp-net-tools rtsp/net-tools
+docker exec -it rtsp-net-tools bash
+```
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Kubernetes Pod
+
+```ShellSession
+cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: Pod
+metadata:
+  name: net-tools
+spec:
+  containers:
+  - name: net-tools
+    image: rtsp/net-tools:latest
+EOF
+kubectl exec -it net-tools -- bash
+```
+
+
+## Links
+
+- [Docker Hub: rtsp/net-tools](https://hub.docker.com/r/rtsp/net-tools/)
+- [GitHub: rtsp/docker-net-tools](https://github.com/rtsp/docker-net-tools)
