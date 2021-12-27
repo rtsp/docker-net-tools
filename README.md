@@ -116,6 +116,12 @@ or just run it interactively
 kubectl exec -it net-tools-q48n6 -- bash
 ```
 
+or if you don't mind which Pod to use
+
+```ShellSession
+kubectl exec -it daemonset/net-tools -- bash
+```
+
 
 ## Links
 
