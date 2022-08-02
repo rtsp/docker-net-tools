@@ -39,6 +39,19 @@ RUN set -x && apt-get update && apt-get --yes --no-install-recommends install \
     util-linux \
     vim-tiny \
     wget \
+    zip \
+    unzip \
+    gzip \
+    pigz \
+    bzip2 \
+    pbzip2 \
+    xz-utils \
+    pixz \
+    zstd \
+    etcd-client \
+    mariadb-client \
+    postgresql-client \
+    redis-tools \
     && rm -rvf /var/lib/apt/lists/*
 
 COPY files/ /root/
