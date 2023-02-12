@@ -30,6 +30,7 @@ RUN set -x && apt-get update && apt-get --yes --no-install-recommends install \
     nmap \
     openssh-client \
     openssl \
+    procps \
     rsync \
     sed \
     socat \
