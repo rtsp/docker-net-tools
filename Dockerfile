@@ -1,4 +1,4 @@
-FROM debian:bookworm-20240513-slim
+FROM debian:bookworm-20240612-slim
 
 LABEL org.opencontainers.image.title="RTSP Network Tools"
 LABEL org.opencontainers.image.authors="RTSP <docker@rtsp.us>"
